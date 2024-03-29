@@ -1,0 +1,10 @@
+.QRreader{
+opacity:0;
+position:relative;
+z-index:-1;
+}
+.active-QRreader{
+    opacity:1;
+position:relative;
+z-index:1;
+}

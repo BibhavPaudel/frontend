@@ -1,0 +1,20 @@
+.mainLaunchContainer {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+.firstLaunchContainer {
+  max-width: 80%;
+  margin: auto;
+}
+.firstLaunchContainer img {
+  max-width: 100%;
+}
+.scanButton {
+  font-size: 25px;
+  font-weight: 700;
+  background-color: #b83a3a;
+  border: none;
+  border-radius: 50px;
+  padding: 15px;
+}
