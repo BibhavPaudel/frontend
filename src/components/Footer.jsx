@@ -11,8 +11,9 @@ function Footer() {
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
-        flexDirection: "column",
+        flexDirection: "row",
         width: "100%",
+        margin:"0",
       }}
     >
       <span style={{ marginLeft: "10px" }}>Developed by RedSan Co.</span>

@@ -31,6 +31,7 @@ const Login = () => {
   //destructuring States
   const { openError, vertical, horizontal } = state;
   const { openSuccess, verticals, horizontals } = success;
+  const [loading, setLoading] = useState(null);
   //close for Snackbar
   const handleClose = () => {
     setState({ ...state, openError: false });
@@ -56,6 +57,7 @@ const Login = () => {
   const onSubmit = (event) => {
     event.preventDefault();
     console.log(fullname, phone, dept);
+    setLoading(true);
 
     //used 192.168 for mobile phone
     axios
@@ -73,11 +75,10 @@ const Login = () => {
         //req sucess snackbar activate
         if (req.data.status == "200") {
           setSuccess({ ...success, openSuccess: true });
-
-          //redirect after 3 sec delay
+          //redirect after .5 sec delay
           setTimeout(() => {
             nav("/home");
-          }, 3000);
+          }, 500);
         }
       })
       .catch((e) => {
@@ -285,7 +286,7 @@ const Login = () => {
             setDept(e.target.value);
           }}
         />
-        <button className="submitButton">Submit</button>
+       { loading ? <button className="submitButton"> Loading... </button> : <button className="submitButton"> Submitt </button>}
       </form>
       <button
         className={clicked ? "startedButton five" : "startedButton"}

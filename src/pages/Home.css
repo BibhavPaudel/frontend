@@ -1,8 +1,8 @@
 .mainIndexContainer {
-  height: 100%;
-  background: #2c2a3b;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
+  margin-bottom: 0;
 }
 .cardsContainer {
   display: flex;
@@ -12,6 +12,14 @@
 .card1 {
   margin-bottom: 20px;
 }
+.card1: hover {
+  transform: scale(1.5);
+}
+/* .card3:hover {
+  margin-bottom: 30px;
+  transform: scaleY(1.5) 1s linear;
+} */
+
 .card2 {
   margin-bottom: 30px;
 }

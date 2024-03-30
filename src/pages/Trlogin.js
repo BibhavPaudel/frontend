@@ -10,14 +10,16 @@ export default function Trlogin() {
   const [teamid, setTeamid] = useState("");
 
   const [name, setName] = useState("");
+  const [loading, setLoading] = useState("login");
 
   // function validateForm() {
   //   return teamid.length > 0 && name.length > 2;
   // }
-
-  const callAPI = () => {
-    // var fetchDateUrl = ({ teamid }) =>
-    //   `http://localhost:3001/trlogin/${teamid}`;
+  const handleSubmit = (event) => {
+    event.preventDefault();
+  };
+  const callAPI = (event) => {
+    setLoading("loading...");
     axios
       .get(`https://redsan-backend.onrender.com/trlogin/${teamid}`)
       .then((response) => {
@@ -43,9 +45,9 @@ export default function Trlogin() {
 
   return (
     <>
-    <Navbar/>
+      <Navbar />
       <div className="Login ">
-        <form action="" onSubmit={callAPI} className={"loginForm four"}>
+        <form action="" onSubmit={handleSubmit} className={"loginForm four"}>
           <input
             type="number"
             placeholder="teamID"
@@ -62,9 +64,10 @@ export default function Trlogin() {
               setName(e.target.value);
             }}
           />
+          {}
+          {teamid ? <button onClick={callAPI}>{loading}</button> : null}
         </form>
       </div>
-      {teamid ? <button onClick={callAPI}>Login</button> : null}
     </>
   );
 }

@@ -1,36 +1,46 @@
 .mainTreasureContainer {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-  }
-  
-  .cardImage {
-    margin-top: 20px;
-  }
-  .card {
-    max-width: 90%;
-    margin: auto;
-    background: #b83a3a;
-    border-radius: 10px;
-    height: 400px;
-    margin-top: 10px;
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 40px;
-  }
-  .card h2 {
-    font-weight: 800;
-    color: white;
-    padding-top: 40px;
-  }
-  .card span {
-    color: white;
-    font-weight: 700;
-  }
-  .riddle {
-    margin-top: 100px;
-  }
-  .hint {
-    margin-top: 80px;
-  }
-  
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  margin-bottom: auto;
+}
+.firstTreasureContainer {
+  margin: auto;
+}
+
+.cardImage {
+  margin-top: 20px;
+}
+.card {
+  max-width: 90%;
+  margin: auto;
+  background: #b83a3a;
+  border-radius: 10px;
+  height: 400px;
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 40px;
+}
+.card h2 {
+  font-weight: 800;
+  color: white;
+  padding-top: 40px;
+}
+.card span {
+  color: white;
+  font-weight: 700;
+}
+.riddle {
+  margin-top: 100px;
+}
+.hint {
+  margin-top: 80px;
+}
+.couponcontainer {
+  flex: column;
+  flex-gap: 40px;
+}
+.closebutton {
+  margin-top: 150px;
+}

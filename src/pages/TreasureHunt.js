@@ -60,13 +60,13 @@ function TreasureHunt() {
           )}
         </div>
         {open == true ? (
-          <div>
+          <div className="couponcontainer">
             <Coupon> </Coupon>
-            <button onClick={closeScanner}>Close Scanner</button>
+            <button className="closebutton" onClick={closeScanner}>Close Scanner</button>
           </div>
         ) : null}
       </TreasureContext.Provider>
-      <Footer></Footer>
+      {/* <Footer></Footer> */}
     </>
   );
 }

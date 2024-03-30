@@ -1,16 +1,15 @@
 .mainIndexContainer {
-    height: 30ch;
-    background: #2c2a3b;
-    display: flex;
-    flex-direction: column;
-  }
-  button {
-    color: white;
-    font-size: 25px;
-    font-weight: 700;
-    background-color: #e71c1c;
-    border: none;
-    border-radius: 50px;
-    padding: 15px;
-    margin-top: 20px;
-  }
+  height: 30vh;
+  display: flex;
+  flex-direction: column;
+}
+button {
+  color: white;
+  font-size: 25px;
+  font-weight: 700;
+  background-color: #e71c1c;
+  border: none;
+  border-radius: 50px;
+  padding: 15px;
+  margin-top: 20px;
+}

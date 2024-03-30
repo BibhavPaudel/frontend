@@ -2,6 +2,7 @@ import { React, useContext, useEffect, useRef, useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
 
 // Styles
+import "./qrreader.css";
 
 // Qr Scanner
 import QrScanner from "qr-scanner";
@@ -16,6 +17,7 @@ const QrReader = () => {
   const videoEl = useRef(null);
   const qrBoxEl = useRef(null);
   const [qrOn, setQrOn] = useState(true);
+  const [scansucc, setScansucc] = useState(false);
 
   const { teamflow, stage } = useContext(TreasureContext);
 
@@ -36,9 +38,6 @@ const QrReader = () => {
     if (scannedResult.match(teamflow.flow[stage])) {
       alert("Congrats Do you want to continue to next level");
       localStorage.setItem("stage", Number(localStorage.getItem("stage")) + 1);
-      if (localStorage.getItem("stage")) {
-        alert(localStorage.getItem("stage"));
-      }
     } else {
       alert("Oops Wrong Location Try to Crack the Riddle");
     }
@@ -95,41 +94,20 @@ const QrReader = () => {
   }, [qrOn]);
 
   return (
-    <>
-      <div className="qr-reader" style={{ maxHeight: 600, maxWidth: 400 }}>
-        {/* QR */}
-        <video
-          style={{ maxWidth: 800, maxHeight: 800, marginLeft: "-225px" }}
-          ref={videoEl}
-        ></video>
-        <div ref={qrBoxEl} className="qr-box">
-          {/* <img
-          src={QrFrame}
-          alt="Qr Frame"
-          width={256}
-          height={256}
-          className="qr-frame"
-        /> */}
-        </div>
-        {scannedResult ? (
-          <button
-            onClick={() => {
-              goToUrl();
-            }}
-          >
-            Capture QR
-          </button>
-        ) : (
-          <button
-            onClick={() => {
-              goToUrlundefined();
-            }}
-          >
-            Capture QR
-          </button>
-        )}
+    <div
+      className="mainQRContainer"
+      style={{ maxWidth: "90%", maxHeight: "60vh" }}
+    >
+      <>
+        <div className="qr-reader" style={{ maxHeight: 600, maxWidth: 400 }}>
+          {/* QR */}
+          <video
+            style={{ maxWidth: 800, maxHeight: 800, marginLeft: "-225px" }}
+            ref={videoEl}
+          ></video>
+          <div ref={qrBoxEl} className="qr-box"></div>
 
-        {/* Show Data Result if scan is success
+          {/* Show Data Result if scan is success
         {scannedResult && (
           <p
             style={{
@@ -143,8 +121,28 @@ const QrReader = () => {
             Scanned Result: {scannedResult}
           </p>
         )} */}
-      </div>
-    </>
+        </div>
+        <div className="ButtonContainer">
+          {scannedResult ? (
+            <button
+              onClick={() => {
+                goToUrl();
+              }}
+            >
+              Capture QR
+            </button>
+          ) : (
+            <button
+              onClick={() => {
+                goToUrlundefined();
+              }}
+            >
+              Capture QR
+            </button>
+          )}
+        </div>
+      </>
+    </div>
   );
 };
 
