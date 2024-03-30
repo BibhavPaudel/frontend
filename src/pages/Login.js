@@ -60,7 +60,7 @@ const Login = () => {
     //used 192.168 for mobile phone
     axios
       .post(
-        `http://localhost:3001/login` && `http://192.168.29.238:3001/login`,
+        `https://redsan-backend.onrender.com/login`,
         JSON.stringify(formData),
         {
           headers: {

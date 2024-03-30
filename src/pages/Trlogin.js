@@ -19,7 +19,7 @@ export default function Trlogin() {
     // var fetchDateUrl = ({ teamid }) =>
     //   `http://localhost:3001/trlogin/${teamid}`;
     axios
-      .get(`http://localhost:3001/trlogin/${teamid}`)
+      .get(`https://redsan-backend.onrender.com/trlogin/${teamid}`)
       .then((response) => {
         // console.log(response.data);
         const person = response.data;
