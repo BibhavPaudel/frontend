@@ -8,7 +8,7 @@ function Coupon() {
   
  
   return (
-    <div className={"active-QRreader"} style={{ maxHeight: "80%" }}>
+    <div className={"active-QRreader"} style={{ maxHeight: "50%" }}>
       <QrReader />
     </div>
   );
