@@ -38,7 +38,7 @@ export const Spin = () => {
     //Results Show after 1 sec delay
     setTimeout(() => {
       axios
-        .get(`https://redsan-backend.onrender.com/spin`)
+        .get(`https://redsan.onrender.com/spin`)
         .then((response) => {
           console.log(response.data[luck]);
           handleClickOpen();
@@ -62,7 +62,7 @@ export const Spin = () => {
 
   return (
     <div>
-      <Navbar/>
+      <Navbar />
       <iframe
         title="Spin"
         style={{ position: "relative", top: 0, right: 0, "z-index": "-1" }}
