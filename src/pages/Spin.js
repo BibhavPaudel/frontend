@@ -38,7 +38,7 @@ export const Spin = () => {
     //Results Show after 1 sec delay
     setTimeout(() => {
       axios
-        .get(`https://redsan.onrender.com/spin`)
+        .get(`https://redsan-backend.onrender.com/spin`)
         .then((response) => {
           console.log(response.data[luck]);
           handleClickOpen();
