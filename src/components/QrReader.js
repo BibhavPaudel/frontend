@@ -17,7 +17,7 @@ const QrReader = () => {
   const qrBoxEl = useRef(null);
   const [qrOn, setQrOn] = useState(true);
 
-  const {teamflow,stage}= useContext(TreasureContext);
+  const { teamflow, stage } = useContext(TreasureContext);
 
   // Result
   const [scannedResult, setScannedResult] = useState("");
@@ -35,7 +35,10 @@ const QrReader = () => {
   const goToUrl = () => {
     if (scannedResult.match(teamflow.flow[stage])) {
       alert("Congrats Do you want to continue to next level");
-      localStorage.setItem("stage",Number(localStorage.getItem("stage"))+1);
+      localStorage.setItem("stage", Number(localStorage.getItem("stage")) + 1);
+      if (localStorage.getItem("stage")) {
+        alert(localStorage.getItem("stage"));
+      }
     } else {
       alert("Oops Wrong Location Try to Crack the Riddle");
     }
@@ -95,7 +98,10 @@ const QrReader = () => {
     <>
       <div className="qr-reader" style={{ maxHeight: 600, maxWidth: 400 }}>
         {/* QR */}
-        <video style={{ maxWidth: 800, maxHeight: 800, marginLeft: "-225px" }} ref={videoEl}></video>
+        <video
+          style={{ maxWidth: 800, maxHeight: 800, marginLeft: "-225px" }}
+          ref={videoEl}
+        ></video>
         <div ref={qrBoxEl} className="qr-box">
           {/* <img
           src={QrFrame}
