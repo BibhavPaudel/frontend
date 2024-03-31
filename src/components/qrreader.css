@@ -1,4 +1,12 @@
-.ButtonComponent{
-    position:fixed;
-    bottom:0px;
+.ButtonContainer {
+  position: absolute;
+  bottom: 50%;
+  z-index: 2;
+  opacity: 0.5;
+}
+
+@media only screen and (max-width: 600px) {
+  .mainQRContainer {
+    min-height: 60vh;
+  }
 }

@@ -96,7 +96,7 @@ const QrReader = () => {
   return (
     <div
       className="mainQRContainer"
-      style={{ maxWidth: "90%", maxHeight: "60vh" }}
+      style={{ maxWidth: "60vw", maxHeight: "60vh" }}
     >
       <>
         <div className="qr-reader" style={{ maxHeight: 600, maxWidth: 400 }}>

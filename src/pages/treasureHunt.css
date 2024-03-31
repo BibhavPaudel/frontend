@@ -38,8 +38,7 @@
   margin-top: 80px;
 }
 .couponcontainer {
-  flex: column;
-  flex-gap: 40px;
+  min-height:100vh;
 }
 .closebutton {
   margin-top: 150px;
