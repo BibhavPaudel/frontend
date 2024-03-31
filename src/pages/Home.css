@@ -12,15 +12,13 @@
 .card1 {
   margin-bottom: 20px;
 }
-.card1: hover {
-  transform: scale(1.5);
-}
-/* .card3:hover {
-  margin-bottom: 30px;
-  transform: scaleY(1.5) 1s linear;
-} */
+
+
 
 .card2 {
+  margin-bottom: 30px;
+}
+.card3 {
   margin-bottom: 30px;
 }
 .subcardContainer {
