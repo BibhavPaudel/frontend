@@ -18,6 +18,8 @@ function TreasureHunt() {
     setOpen(false);
   }
 
+
+
   const teamflow = JSON.parse(localStorage.getItem("teamflow"));
   const stage = Number(localStorage.getItem("stage"));
 

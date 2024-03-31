@@ -1,6 +1,11 @@
 import { React, useContext, useEffect, useRef, useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
-
+import Button from "@mui/material/Button";
+import Dialog from "@mui/material/Dialog";
+import DialogActions from "@mui/material/DialogActions";
+import DialogContent from "@mui/material/DialogContent";
+import DialogContentText from "@mui/material/DialogContentText";
+import DialogTitle from "@mui/material/DialogTitle";
 // Styles
 import "./qrreader.css";
 
@@ -24,6 +29,8 @@ const QrReader = () => {
   // Result
   const [scannedResult, setScannedResult] = useState("");
 
+  const [open,setOpen] = useState(false);
+
   // Success
   const onScanSuccess = (result = QrScanner.ScanResult) => {
     // 🖨 Print the "result" to browser console.
@@ -36,7 +43,8 @@ const QrReader = () => {
   //redirect on click
   const goToUrl = () => {
     if (scannedResult.match(teamflow.flow[stage])) {
-      alert("Congrats Do you want to continue to next level");
+      // alert("Congrats Do you want to continue to next level");
+      setOpen(true);
       localStorage.setItem("stage", Number(localStorage.getItem("stage")) + 1);
     } else {
       alert("Oops Wrong Location Try to Crack the Riddle");
@@ -93,6 +101,17 @@ const QrReader = () => {
       );
   }, [qrOn]);
 
+  
+
+  const handleClose = () => {
+    setOpen(false);
+    // setDesc("Oops Better Luck Next Time");
+    // setCid("");
+ 
+    nav("/treasurehunt");
+
+  };
+
   return (
     <div
       className="mainQRContainer"
@@ -102,7 +121,7 @@ const QrReader = () => {
         <div className="qr-reader" style={{ maxHeight: 600, maxWidth: 400 }}>
           {/* QR */}
           <video
-            style={{ maxWidth: 800, maxHeight: 800, marginLeft: "-225px" }}
+            style={{ maxWidth: 500, maxHeight: 500, marginLeft: "" }}
             ref={videoEl}
           ></video>
           <div ref={qrBoxEl} className="qr-box"></div>
@@ -134,7 +153,28 @@ const QrReader = () => {
           ) : null}
         </div>
       </>
-    </div>
+      <Dialog
+        open={open}
+        onClose={handleClose}
+        aria-labelledby="alert-dialog-title"
+        aria-describedby="alert-dialog-description"
+      >
+        <DialogTitle id="alert-dialog-title">Coupon ID </DialogTitle>
+        <DialogContent>
+          <DialogContentText id="alert-dialog-description">
+            hehe
+          </DialogContentText>
+        </DialogContent>
+        <DialogActions>
+          {/* <Button onClick={handleClose}></Button> */}
+          <Button onClick={handleClose} autoFocus>
+            Solve Next Riddle
+          </Button>
+        </DialogActions>
+        <p style={{ margin: 40 }}>
+          <b>Note: </b>hi
+        </p>
+      </Dialog></div>
   );
 };
 

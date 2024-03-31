@@ -9,6 +9,8 @@ import DialogContentText from "@mui/material/DialogContentText";
 import DialogTitle from "@mui/material/DialogTitle";
 import spinwheel from "../assets/spinwheel.png";
 import Navbar from "../components/Navbar";
+import { useNavigate } from "react-router-dom";
+
 
 export const Spin = () => {
   // const [spins, setSpins] = useState(3);
@@ -25,8 +27,9 @@ export const Spin = () => {
 
   const handleClose = () => {
     setOpen(false);
-    setDesc("Oops Better Luck Nezt Time");
+    setDesc("Oops Better Luck Next Time");
     setCid("");
+
   };
 
   const onSpin = () => {

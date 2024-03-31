@@ -41,5 +41,6 @@
   min-height: 100vh;
 }
 .closebutton {
-  z-index:2;
+  margin-top: 8vh;
+  z-index: 9999999999999;
 }
