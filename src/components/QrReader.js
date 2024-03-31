@@ -170,9 +170,6 @@ const QrReader = () => {
             Solve Next Riddle
           </Button>
         </DialogActions>
-        <p style={{ margin: 40 }}>
-          <b>Note: </b>hi
-        </p>
       </Dialog></div>
   );
 };
