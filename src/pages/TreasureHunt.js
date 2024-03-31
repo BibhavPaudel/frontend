@@ -35,7 +35,7 @@ function TreasureHunt() {
                   <img src={t} alt="" />
                 </div>
                 <div className="card">
-                  <span className="hint">
+                  <span className="hinta">
                     Team<br />
                     {teamflow.team_id}
                   </span>
