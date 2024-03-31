@@ -40,6 +40,15 @@ const QrReader = () => {
     setScannedResult(result?.data);
   };
 
+  const handleClose = () => {
+    setOpen(false);
+    // setDesc("Oops Better Luck Next Time");
+    // setCid("");
+ 
+    nav("/treasurehunt");
+
+  };
+
   //redirect on click
   const goToUrl = () => {
     if (scannedResult.match(teamflow.flow[stage])) {
@@ -103,14 +112,7 @@ const QrReader = () => {
 
   
 
-  const handleClose = () => {
-    setOpen(false);
-    // setDesc("Oops Better Luck Next Time");
-    // setCid("");
- 
-    nav("/treasurehunt");
 
-  };
 
   return (
     <div
@@ -159,10 +161,10 @@ const QrReader = () => {
         aria-labelledby="alert-dialog-title"
         aria-describedby="alert-dialog-description"
       >
-        <DialogTitle id="alert-dialog-title">Coupon ID </DialogTitle>
+        <DialogTitle id="alert-dialog-title"> Congratulations </DialogTitle>
         <DialogContent>
           <DialogContentText id="alert-dialog-description">
-            hehe
+            Congratulations You have solved the Riddle
           </DialogContentText>
         </DialogContent>
         <DialogActions>
