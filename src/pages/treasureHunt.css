@@ -38,8 +38,8 @@
   margin-top: 80px;
 }
 .couponcontainer {
-  min-height:100vh;
+  min-height: 100vh;
 }
 .closebutton {
-  margin-top: 150px;
+  z-index:2;
 }

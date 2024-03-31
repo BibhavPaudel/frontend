@@ -3,13 +3,13 @@ import QrReader from "../components/QrReader";
 import "./Coupon.css"
 
 //Scanning the Coupon Complete
-function Coupon() {
+function Coupon(open) {
   
   
  
   return (
     <div className={"active-QRreader"} style={{ maxHeight: "50%" }}>
-      <QrReader />
+      <QrReader props={open} />
     </div>
   );
 }

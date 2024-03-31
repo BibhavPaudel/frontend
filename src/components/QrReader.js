@@ -131,15 +131,7 @@ const QrReader = () => {
             >
               Capture QR
             </button>
-          ) : (
-            <button
-              onClick={() => {
-                goToUrlundefined();
-              }}
-            >
-              Capture QR
-            </button>
-          )}
+          ) : null}
         </div>
       </>
     </div>

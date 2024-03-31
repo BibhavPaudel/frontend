@@ -61,7 +61,7 @@ function TreasureHunt() {
         </div>
         {open == true ? (
           <div className="couponcontainer">
-            <Coupon> </Coupon>
+            <Coupon props={open}> </Coupon>
             <button className="closebutton" onClick={closeScanner}>Close Scanner</button>
           </div>
         ) : null}
