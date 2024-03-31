@@ -1,6 +1,6 @@
 .ButtonContainer {
   position: absolute;
-  bottom: 50%;
+  bottom: 40%;
   z-index: 2;
   opacity: 0.5;
 }

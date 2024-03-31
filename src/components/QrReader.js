@@ -42,10 +42,7 @@ const QrReader = () => {
 
   const handleClose = () => {
     setOpen(false);
-    // setDesc("Oops Better Luck Next Time");
-    // setCid("");
- 
-    nav("/treasurehunt");
+    window.location.reload();
 
   };
 
