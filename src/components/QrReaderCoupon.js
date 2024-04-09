@@ -88,10 +88,10 @@ const QrReaderCoupon = () => {
 
   return (
     <>
-      <div className="qr-reader">
+      <div className="qr-reader" style={{ maxWidth: "60vw", maxHeight: "60vh" }}>
         {/* QR */}
         <video
-          style={{ maxWidth: 800, maxHeight: 800, marginLeft: "-225px" }}
+          style={{ maxWidth: 500, maxHeight: 500, marginLeft: "-25px" }}
           ref={videoEl}
         ></video>
         <div ref={qrBoxEl} className="qr-box">
