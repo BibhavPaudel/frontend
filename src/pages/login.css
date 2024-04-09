@@ -78,6 +78,10 @@ button {
   margin-top: 20px;
 }
 
+.redd{
+  background-color:red !important;
+}
+
 /* All Animations */
 
 @keyframes logoAni {

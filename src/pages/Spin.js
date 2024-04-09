@@ -75,7 +75,10 @@ export const Spin = () => {
         class="giphy-embed"
         allowFullScreen
       ></iframe>
+
+      <div> 
       <Dialog
+      
         open={open}
         onClose={handleClose}
         aria-labelledby="alert-dialog-title"
@@ -111,8 +114,11 @@ export const Spin = () => {
         >
           Click to Spin
         </button>
+        
       )}
+      <br></br>
       free spins left : {(Number(localStorage.getItem("spins_left")))}
+    </div>
     </div>
   );
 };

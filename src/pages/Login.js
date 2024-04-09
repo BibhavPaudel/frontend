@@ -79,13 +79,14 @@ const Login = () => {
           setTimeout(() => {
             nav("/home");
           }, 100);
+          localStorage.setItem("spins_left",3);
         }
       })
       .catch((e) => {
         console.error(e.error);
         //activating snackbar for error
         setState({ ...state, openError: true });
-        localStorage.setItem("spins_left",3);
+        
       });
   };
 
