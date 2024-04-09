@@ -98,10 +98,10 @@ export const Spin = () => {
           it to Stall 12
         </p>
       </Dialog>
-      {Number(spins) <= 0 ? (
+      { (Number(localStorage.getItem("spins_left"))) <= 0 ? (
         <>
           <button>Free Spins Finished</button>
-          <p>Go to the stall and Get 20 More Spins at just Rs 20 </p>
+          <p>Go to the stall and Get 5 More Spins at just Rs 20 </p>
         </>
       ) : (
         <button
@@ -112,7 +112,7 @@ export const Spin = () => {
           Click to Spin
         </button>
       )}
-      free spins left : {spins}
+      free spins left : {(Number(localStorage.getItem("spins_left")))}
     </div>
   );
 };
