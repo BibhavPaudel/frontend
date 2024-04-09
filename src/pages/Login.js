@@ -78,13 +78,14 @@ const Login = () => {
           //redirect after .5 sec delay
           setTimeout(() => {
             nav("/home");
-          }, 500);
+          }, 100);
         }
       })
       .catch((e) => {
         console.error(e.error);
         //activating snackbar for error
         setState({ ...state, openError: true });
+        localStorage.setItem("spins_left",3);
       });
   };
 
@@ -286,7 +287,7 @@ const Login = () => {
             setDept(e.target.value);
           }}
         />
-       { loading ? <button className="submitButton"> Loading... </button> : <button className="submitButton"> Submitt </button>}
+       { loading ? <button className="submitButton"> Loading... </button> : <button className="submitButton"> Submit </button>}
       </form>
       <button
         className={clicked ? "startedButton five" : "startedButton"}

@@ -32,7 +32,7 @@ const QrReaderCoupon = () => {
   const goToUrl = () => {
     if (scannedResult) {
       alert("Excited for Coupons ??");
-      localStorage.setItem("spins_left",3);
+      
     }
   };
   const goToUrlundefined = () => {
